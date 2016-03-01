@@ -34,8 +34,6 @@ setup(
     # Choose your license
     license='Apache License 2.0',
 
-    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    # TODO Add correct values for this
     classifiers=[
         # How mature is this project? Common values are
         #   3 - Alpha
@@ -44,10 +42,7 @@ setup(
         'Development Status :: 4 - Beta',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
-        'Intended Audience :: Information Technology',
         'Intended Audience :: System Administrators',
-        'Topic :: Internet :: Log Analysis',
         'Topic :: System :: Clustering',
         'Topic :: System :: Monitoring',
 
@@ -63,21 +58,7 @@ setup(
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
-
-        'Operating System :: POSIX',
-        'Operating System :: POSIX :: AIX',
-        'Operating System :: POSIX :: BSD',
-        'Operating System :: POSIX :: BSD :: BSD/OS',
-        'Operating System :: POSIX :: BSD :: FreeBSD',
-        'Operating System :: POSIX :: BSD :: NetBSD',
-        'Operating System :: POSIX :: BSD :: OpenBSD',
-        'Operating System :: POSIX :: GNU Hurd',
-        'Operating System :: POSIX :: HP-UX',
-        'Operating System :: POSIX :: IRIX',
-        'Operating System :: POSIX :: Linux',
-        'Operating System :: POSIX :: Other',
-        'Operating System :: POSIX :: SunOS/Solaris',
-        'Operating System :: Unix',
+        'Operating System :: POSIX :: SunOS/Solaris'
     ],
 
     # What does your project relate to?

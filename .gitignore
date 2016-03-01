@@ -46,3 +46,4 @@ docs/_build/
 grafana_alerts.iml
 data/grafana_alerts.cfg
 *.swp
+.DS_Store

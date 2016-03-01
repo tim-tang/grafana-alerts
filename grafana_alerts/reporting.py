@@ -138,7 +138,6 @@ class MailAlertReporter(BaseAlertReporter):
                     'old': old_element,
                     'current': current_element
                 })
-
         return diff_report
 
 
@@ -181,7 +180,7 @@ class MailAlertReporter(BaseAlertReporter):
                                                     date=datetime.datetime.now().strftime("%B %d, %Y"),
                                                     time=datetime.datetime.now().strftime("%I:%M %p"),
                                                     message_signature=hashlib.sha256(html_version_main + html_version_items + datetime.datetime.now().strftime("%B %d, %Y - %I:%M %p")).hexdigest(),
-                                                    companyName=""
+                                                    companyName="Briphant.Inc"
                                                     )
             # text_version = bs.get_text()
 

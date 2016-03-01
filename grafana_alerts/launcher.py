@@ -22,6 +22,7 @@ class Configuration:
     def __init__(self):
         # TODO make sure the url finishes with '/' or requests could fail.
         self.grafana_url = 'http://localhost:3130/'
+        self.ddb_url = 'http://localhost:7000'
         self.grafana_token = ""
         self.email_from = "grafana-alert@localhost"
         self.smtp_server = "localhost"
@@ -32,7 +33,8 @@ class Configuration:
 
     def read_config(self):
         try:
-            with open("/etc/grafana_alerts/grafana_alerts.cfg", "r") as config_file:
+            #with open("/etc/grafana_alerts/grafana_alerts.cfg", "r") as config_file:
+            with open("./data/grafana_alerts.cfg", "r") as config_file:
                 config = config_file.readlines()
                 for line in config:
                     l = line.strip()
