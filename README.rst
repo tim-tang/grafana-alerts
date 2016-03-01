@@ -63,7 +63,7 @@ with::
 
 Add a cron task to execute grafana_alerts for example each 3 minutes:::
 
-    */3 * * * *     grafana_alerts
+    */3 * * * *     grafanaAlerts
 
 
 Monitoring Dashboards

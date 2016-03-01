@@ -44,3 +44,5 @@ docs/_build/
 # intellij files
 .idea
 grafana_alerts.iml
+data/grafana_alerts.cfg
+*.swp
