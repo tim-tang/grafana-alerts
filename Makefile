@@ -30,4 +30,4 @@ clean-pyc:
 
 .PHONY: test
 test:
-	@nosetests -s -v
+	@python -m unittest discover

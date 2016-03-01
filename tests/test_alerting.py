@@ -36,7 +36,7 @@ class DashboardScannerTest(BaseAlertingTest):
 
         # when
         dashboards = scanner.obtain_dashboards()
-        print dashboards
+        #print dashboards
 
         # then
         self.assertIsNotNone(dashboards)
@@ -56,7 +56,7 @@ class DashboardTest(BaseAlertingTest):
 
         # when
         alert_checkers = dashboard.obtain_alert_checkers()
-        print alert_checkers
+        #print alert_checkers
 
         # then
         self.assertIsNotNone(alert_checkers)
@@ -70,9 +70,9 @@ class AlertCheckerTest(BaseAlertingTest):
         grafana_targets = [{u'hide': False,
                             u'target': u"aliasByNode(exclude(typrod.*.disk_free_percent_rootfs.sum, '__SummaryInfo__'), 1)"}]
         alert_conditions = [
-            ["50<=x<=100", "normal", "pablo@ailive.net"],
-            ["35<x<50", "warning", "pablo@ailive.net"],
-            ["x<=35", "critical", "pablo@ailive.net"]
+            ["50<=x<=100", "normal", "tangjilong@briphant.com"],
+            ["35<x<50", "warning", "tangjilong@briphant.com"],
+            ["x<=35", "critical", "tangjilong@briphant.com"]
         ]
         alert_checker = AlertChecker(grafana_url, grafana_token, title, grafana_targets)
         alert_checker.set_alert_conditions(alert_conditions=alert_conditions)
@@ -81,7 +81,7 @@ class AlertCheckerTest(BaseAlertingTest):
         # when
         alert_checker.check()
         reported_alerts = alert_checker.calculate_reported_alerts()
-        print reported_alerts
+        #print reported_alerts
 
         # then
         self.assertIsNotNone(reported_alerts)
@@ -95,7 +95,7 @@ class AlertCheckerTest(BaseAlertingTest):
         # given
         reported_alerts = self.test_check_undefined_alert_criteria()
         self.assertIsNotNone(reported_alerts)
-        alert_reporter = MailAlertReportedWithMockedMailServer(email_from="builder@ailive.net", smtp_server="sendmail.ikuni.com", smtp_port=25)
+        alert_reporter = MailAlertReportedWithMockedMailServer(email_from="tangjilong@briphant.com", smtp_server="smtp.partner.outlook.cn", smtp_port=587)
 
         # when
         alert_reporter.report(reported_alerts)
@@ -107,5 +107,5 @@ class MailAlertReportedWithMockedMailServer(MailAlertReporter):
     def _send_email(self, email, email_to_string):
         self.sent_emails_counter+=1
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+     unittest.main()
